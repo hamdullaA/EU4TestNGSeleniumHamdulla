@@ -63,11 +63,13 @@ public class iframeTest {
         driver.findElement(By.cssSelector("#tinymce")).sendKeys("MikeSmith WITH WEBELEMENT");
 
         //html
-        //top
-        //left
-        //middle
-        //right
-        //bottom
+            //top
+                //left
+                //middle
+                     //firstframe
+                            //secondframe
+                //right
+            //bottom
         /*
         We can switch one at a time, cannot switch to grandchild directly.
 ·       We cannot switch to siblings.

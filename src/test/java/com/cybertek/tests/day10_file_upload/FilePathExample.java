@@ -10,7 +10,7 @@ public class FilePathExample {
 
         // /Users/jamaldemir/IdeaProjects/fromgit/EU3TestNGSelenium src/test/resources/textfile.txt;
         //System.out.println(System.getProperty("user.dir"));
-
+        System.out.println(System.getProperty("os.name"));
         String projectPath = System.getProperty("user.dir");
         System.out.println("projectPath = " + projectPath);
 
