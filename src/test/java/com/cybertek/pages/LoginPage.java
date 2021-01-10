@@ -24,6 +24,7 @@ public class LoginPage {
     @FindBy(id = "prependedInput2")
     public WebElement passwordInput;
 
+    //driver.findElement(By.id("_submit"));
     @FindBy(id = "_submit")
     public WebElement loginBtn;
 
@@ -39,6 +40,16 @@ public class LoginPage {
 
         String username = ConfigurationReader.get("storemanager_username");
         String password = ConfigurationReader.get("storemanager_password");
+
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginBtn.click();
+    }
+
+    public void loginAsDriver(){
+
+        String username = ConfigurationReader.get("driver_username");
+        String password = ConfigurationReader.get("driver_password");
 
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
