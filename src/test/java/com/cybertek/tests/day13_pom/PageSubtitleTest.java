@@ -5,6 +5,8 @@ import com.cybertek.pages.DashboardPage;
 import com.cybertek.pages.LoginPage;
 import com.cybertek.tests.TestBase;
 import com.cybertek.utilities.BrowserUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -22,6 +24,10 @@ public class PageSubtitleTest extends TestBase {
     public void test1(){
 
         LoginPage loginPage = new LoginPage();
+        WebElement Advanced=driver.findElement(By.id("details-button"));
+        Advanced.click();
+        WebElement ProceedToPage=driver.findElement(By.id("proceed-link"));
+        ProceedToPage.click();
 
         loginPage.loginAsDriver();
 
