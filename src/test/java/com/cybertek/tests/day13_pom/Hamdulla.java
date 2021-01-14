@@ -25,12 +25,7 @@ public class Hamdulla extends TestBase {
 
         driver.findElement(By.id("prependedInput")).sendKeys(username);
         driver.findElement(By.id("prependedInput2")).sendKeys(password+ Keys.ENTER);
-        /*WebElement Fleet=driver.findElement(By.xpath("//header/div[@id='main-menu']/ul[1]/li[1]/a[1]/span[1]"));
-        Fleet.click();
-        WebElement Vehicle=driver.findElement(By.xpath("//header/div[@id='main-menu']/ul[1]/li[1]/a[1]/span[1]"));
-        Vehicle.click();
 
-         */
        DashboardPage dashboardPage = new DashboardPage();
 
         //String actualSubtitle = dashboardPage.getPageSubTitle();
