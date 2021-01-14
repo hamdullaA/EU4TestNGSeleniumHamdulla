@@ -42,6 +42,10 @@ public class NegativeLoginTestWithReport extends TestBase {
         extentLogger = report.createTest("Wrong Username Test");
 
         LoginPage loginPage = new LoginPage();
+        WebElement Advanced=driver.findElement(By.id("details-button"));
+        Advanced.click();
+        WebElement ProceedToPage=driver.findElement(By.id("proceed-link"));
+        ProceedToPage.click();
         extentLogger.info("Enter username: someusername");
         loginPage.usernameInput.sendKeys("someusername");
 
