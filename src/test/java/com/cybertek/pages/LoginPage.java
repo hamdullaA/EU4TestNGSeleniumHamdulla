@@ -2,6 +2,7 @@ package com.cybertek.pages;
 
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +14,7 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(Driver.get(),this);
     }
+
 
     //driver.findElement(By.id("prependedInput"));
     @FindAll({
@@ -31,8 +33,10 @@ public class LoginPage {
 
 
     public void login(String username,String password){
+
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
+
         loginBtn.click();
     }
 
