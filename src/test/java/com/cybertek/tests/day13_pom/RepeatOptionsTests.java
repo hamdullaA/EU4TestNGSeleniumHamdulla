@@ -47,10 +47,10 @@ public class RepeatOptionsTests extends TestBase {
         CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
         //Click on create calendar events
         //wait for loader mask
-        calendarEventsPage.waitUntilLoaderScreenDisappear();
-        BrowserUtils.waitForClickablility(calendarEventsPage.createCalendarEvent,5);
-        calendarEventsPage.createCalendarEvent.click();
-
+       // calendarEventsPage.waitUntilLoaderScreenDisappear();
+        //BrowserUtils.waitForClickablility(calendarEventsPage.createCalendarEvent,10);
+        //calendarEventsPage.createCalendarEvent.click();
+/*
         CreateCalendarEventsPage createCalendarEventsPage = new CreateCalendarEventsPage();
         // Click on repeat
         createCalendarEventsPage.repeat.click();
@@ -59,7 +59,7 @@ public class RepeatOptionsTests extends TestBase {
         Assert.assertTrue(createCalendarEventsPage.days.isSelected(),"Verify repeat days is selected");
         //verify that repeat weekday is not checked
         Assert.assertFalse(createCalendarEventsPage.weekday.isSelected(),"Verify weekday is not selected");
-
+*/
     }
 
       /*
@@ -78,6 +78,10 @@ public class RepeatOptionsTests extends TestBase {
         LoginPage loginPage = new LoginPage();
 
         //Login as driver
+        WebElement Advanced=driver.findElement(By.id("details-button"));
+        Advanced.click();
+        WebElement ProceedToPage=driver.findElement(By.id("proceed-link"));
+        ProceedToPage.click();
         loginPage.loginAsDriver();
 
         DashboardPage dashboardPage = new DashboardPage();
@@ -111,6 +115,8 @@ public class RepeatOptionsTests extends TestBase {
         List<String> actualList2 = BrowserUtils.getElementsText(actualOptions);
         //Verify that repeat options are Daily, Weekly, Monthly,Yearly(in this order)
         Assert.assertEquals(actualList,expectedList,"Verify Daily weekly monthly yearly");
+
+
 
     }
 }
