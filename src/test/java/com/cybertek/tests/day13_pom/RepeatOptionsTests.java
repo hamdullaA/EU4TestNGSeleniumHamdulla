@@ -94,8 +94,8 @@ public class RepeatOptionsTests extends TestBase {
         CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
         //Click on create calendar events
         //wait for loader mask
-        calendarEventsPage.waitUntilLoaderScreenDisappear();
-        BrowserUtils.waitForClickablility(calendarEventsPage.createCalendarEvent,5);
+        //calendarEventsPage.waitUntilLoaderScreenDisappear();
+        //BrowserUtils.waitForClickablility(calendarEventsPage.createCalendarEvent,5);
         calendarEventsPage.createCalendarEvent.click();
 
         CreateCalendarEventsPage createCalendarEventsPage = new CreateCalendarEventsPage();

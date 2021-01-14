@@ -40,6 +40,8 @@ public class ExtentDemoTest {
           report.setSystemInfo("Browser", ConfigurationReader.get("browser"));
           report.setSystemInfo("OS",System.getProperty("os.name"));
 
+
+
       }
 
       @Test
