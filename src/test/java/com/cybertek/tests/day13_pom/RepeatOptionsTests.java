@@ -29,7 +29,7 @@ public class RepeatOptionsTests extends TestBase {
     * */
     //TASK UNTIL 12:45
     @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
 
         LoginPage loginPage = new LoginPage();
 
@@ -47,9 +47,12 @@ public class RepeatOptionsTests extends TestBase {
         CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
         //Click on create calendar events
         //wait for loader mask
-       // calendarEventsPage.waitUntilLoaderScreenDisappear();
-        //BrowserUtils.waitForClickablility(calendarEventsPage.createCalendarEvent,10);
-        //calendarEventsPage.createCalendarEvent.click();
+       //calendarEventsPage.waitUntilLoaderScreenDisappear();
+        //BrowserUtils.waitForClickablility(calendarEventsPage.createCalendarEvent,5);
+        Thread.sleep(5000);
+        calendarEventsPage.createCalendarEvent.click();
+
+
 /*
         CreateCalendarEventsPage createCalendarEventsPage = new CreateCalendarEventsPage();
         // Click on repeat
