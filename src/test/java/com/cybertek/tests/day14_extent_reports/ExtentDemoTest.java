@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class ExtentDemoTest {
 
-      //this class is used for starting nad building reports
+      //this class is used for starting and building reports
       ExtentReports report;
       //this class is used to create HTML report file
       ExtentHtmlReporter htmlReporter;
