@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Hmadulla extends TestBase {
+public class Hamdulla extends TestBase {
     @Test
     public void OpenBrowserWithConf(){
 
