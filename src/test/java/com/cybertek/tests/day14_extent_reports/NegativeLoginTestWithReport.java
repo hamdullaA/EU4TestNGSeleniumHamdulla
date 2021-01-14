@@ -2,6 +2,8 @@ package com.cybertek.tests.day14_extent_reports;
 
 import com.cybertek.pages.LoginPage;
 import com.cybertek.tests.TestBase;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,6 +15,10 @@ public class NegativeLoginTestWithReport extends TestBase {
         extentLogger = report.createTest("Wrong Password Test");
 
         LoginPage loginPage = new LoginPage();
+        WebElement Advanced=driver.findElement(By.id("details-button"));
+        Advanced.click();
+        WebElement ProceedToPage=driver.findElement(By.id("proceed-link"));
+        ProceedToPage.click();
 
         extentLogger.info("Enter Username: user1");
         loginPage.usernameInput.sendKeys("user1");
@@ -24,7 +30,7 @@ public class NegativeLoginTestWithReport extends TestBase {
         loginPage.loginBtn.click();
 
         extentLogger.info("Verify Page URL");
-        Assert.assertEquals(driver.getCurrentUrl(),"https://qa1.vytrack.com/user/login");
+        Assert.assertEquals(driver.getCurrentUrl(),"https://qa.transmuda.com/user/login");
 
         extentLogger.pass("Wrong Password Test is Passed");
 
