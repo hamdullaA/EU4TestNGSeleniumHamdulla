@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Vytrack Automation" verbose="1">
-    <test name="Vytrack Smoke Test">
+<suite name="Transmuda Automation" verbose="1">
+    <test name="Transmuda Smoke Test">
         <packages>
             <package name="com.cybertek.tests.day13_pom"></package>
             <package name="com.cybertek.tests.day14_extent_reports"></package>
