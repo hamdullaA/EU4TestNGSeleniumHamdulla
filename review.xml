@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Transmuda Automation" verbose="1">
+    <test name="Transmuda Automation">
+       <packages>
+           <package name="com.cybertek.tests.day14_extent_reports"></package>
+       </packages>
+    </test>
+</suite>
