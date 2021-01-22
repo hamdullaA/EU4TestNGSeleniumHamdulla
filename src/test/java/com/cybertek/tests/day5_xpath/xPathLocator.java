@@ -12,9 +12,10 @@ public class xPathLocator {
 
         driver.get("http://practice.cybertekschool.com/multiple_buttons");
 
-        WebElement button2 = driver.findElement(By.xpath("//button[@name='button2']"));
+        //WebElement button2 = driver.findElement(By.xpath("//button[@name='button2']"));
+        WebElement button22=driver.findElement(By.xpath("//button[@onclick='button2()']"));
 
-        button2.click();
+        button22.click();
 
         Thread.sleep(2000);
 
