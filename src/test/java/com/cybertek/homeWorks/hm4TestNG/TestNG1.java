@@ -21,7 +21,7 @@ public class TestNG1 {
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
-       // driver.quit();
+        driver.quit();
     }
     @Test
     public void testCase1(){
@@ -107,6 +107,7 @@ public class TestNG1 {
         WebElement displayedMes=driver.findElement(By.xpath("//p"));
         System.out.println("displayedMes.isDisplayed() = " + displayedMes.isDisplayed());
         Assert.assertTrue(displayedMes.isDisplayed(),"You've successfully completed registration!");
+
 
 
 
