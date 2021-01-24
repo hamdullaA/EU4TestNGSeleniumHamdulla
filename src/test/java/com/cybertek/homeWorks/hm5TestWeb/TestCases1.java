@@ -76,7 +76,7 @@ public class TestCases1 extends TestBase {
         List<WebElement> allRowsWithoutHeader = driver.findElements(By.xpath("//table//tbody//tr"));
         int nums=allRowsWithoutHeader.size();
         System.out.println("nums = " + nums);
-        Assert.assertTrue(num==nums,"number of calendar events (rows in the table) is equals to number of records");
+        Assert.assertTrue(num==nums,"number of calendar events is equals to number of records");
 
 
 
