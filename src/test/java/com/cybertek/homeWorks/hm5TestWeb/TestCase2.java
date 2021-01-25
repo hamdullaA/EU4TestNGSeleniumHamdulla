@@ -93,4 +93,19 @@ public class TestCase2 extends TestBase {
 
 
 }
+@Test
+   public void test5(){
+    LoginPage loginPage=new LoginPage();
+    String username = ConfigurationReader.get("storemanager_username");
+    String password = ConfigurationReader.get("storemanager_password");
+    loginPage.login(username,password);
+    new DashboardPage().navigateToModule("Activities","Calendar Events");
+    WebElement checkBox=driver.findElement(By.xpath("(//button[@class='btn btn-default btn-small dropdown-toggle'])[1]"));
+    checkBox.click();
+    WebElement checkAll=driver.findElement(By.xpath("//body/ul/li[1]/a"));
+    checkAll.click();
+    
+
+
+}
 }
