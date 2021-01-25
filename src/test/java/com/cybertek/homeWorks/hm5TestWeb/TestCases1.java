@@ -11,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-
+//based on storemanager51
 public class TestCases1 extends TestBase {
     @Test
     public void test1(){
@@ -65,8 +65,8 @@ public class TestCases1 extends TestBase {
 
 
         String recordNumber =records.getText() .replaceAll("[^0-9]", "");
-        int num=Integer.parseInt(recordNumber);
-        System.out.println("num = " + num);
+        int numOfrecord=Integer.parseInt(recordNumber);
+        System.out.println("numOfrecord = " + numOfrecord);
         WebElement choose=driver.findElement(By.xpath("(//span[@class='caret'])[9]"));
         choose.click();
         WebElement button50=driver.findElement(By.xpath("(//a[@class='dropdown-item'])[3]"));
@@ -74,9 +74,9 @@ public class TestCases1 extends TestBase {
         Thread.sleep(2000);
 
         List<WebElement> allRowsWithoutHeader = driver.findElements(By.xpath("//table//tbody//tr"));
-        int nums=allRowsWithoutHeader.size();
-        System.out.println("nums = " + nums);
-        Assert.assertTrue(num==nums,"number of calendar events is equals to number of records");
+        int rowNumbers=allRowsWithoutHeader.size();
+        System.out.println("rowNumbers = " + rowNumbers);
+        Assert.assertTrue(numOfrecord==rowNumbers,"number of calendar events is equals to number of records");
 
 
 
