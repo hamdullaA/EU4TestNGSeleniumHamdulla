@@ -43,7 +43,8 @@ public class TestNG1 {
         driver.findElement(By.linkText("Registration Form")).click();
         WebElement cLanguage=driver.findElement(By.xpath("(//label[@class='form-check-label'])[1]"));
         cLanguage.click();
-        Assert.assertTrue(cLanguage.isDisplayed(),"c++ is displayed");
+        Assert.assertEquals(cLanguage.getText(),"c++");
+        //Assert.assertTrue(cLanguage.isDisplayed(),"c++ is displayed");
         WebElement java=driver.findElement(By.xpath("(//label[@class='form-check-label'])[2]"));
         java.click();
         Assert.assertTrue(java.isDisplayed(),"java is displayed");
